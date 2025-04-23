@@ -1,4 +1,5 @@
 const Repack = require('@callstack/repack');
+const path = require('path');
 
 module.exports = (env) => {
   const platform = env.platform || process.env.PLATFORM || 'android';
@@ -11,6 +12,7 @@ module.exports = (env) => {
     },
     output: {
       uniqueName: 'gallery',
+      path: path.resolve(__dirname, 'dist'),          // <— write here
     },
     module: {
       rules: [
