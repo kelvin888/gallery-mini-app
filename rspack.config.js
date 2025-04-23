@@ -12,7 +12,7 @@ module.exports = (env) => {
     },
     output: {
       uniqueName: 'gallery',
-      path: path.resolve(__dirname, 'dist'),          // <— write here
+      path: path.resolve(__dirname, `dist/${platform}`),          // <— write here
     },
     module: {
       rules: [
