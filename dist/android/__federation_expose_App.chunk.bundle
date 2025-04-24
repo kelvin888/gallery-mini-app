@@ -17,14 +17,54 @@ var _interop_require_default = __webpack_require__(/*! @swc/helpers/_/_interop_r
 var _jsxruntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _react = /*#__PURE__*/ _interop_require_default._(__webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react"));
 var _reactnative = __webpack_require__(/*! react-native */ "webpack/sharing/consume/default/react-native/react-native");
-var App = ()=>{
-    return /*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.View, {
-        children: /*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.Text, {
-            children: "Hi, I'm a React Native App"
+var App = ()=>/*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.SafeAreaView, {
+        style: styles.safe,
+        children: /*#__PURE__*/ (0, _jsxruntime.jsxs)(_reactnative.View, {
+            style: styles.container,
+            children: [
+                /*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.Text, {
+                    style: styles.greeting,
+                    children: "\uD83D\uDC4B Hi,"
+                }),
+                /*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.Text, {
+                    style: styles.welcome,
+                    children: "Welcome to"
+                }),
+                /*#__PURE__*/ (0, _jsxruntime.jsx)(_reactnative.Text, {
+                    style: styles.appName,
+                    children: "AwesomeGallery"
+                })
+            ]
         })
     });
-};
 var _default = App;
+var styles = _reactnative.StyleSheet.create({
+    safe: {
+        flex: 1,
+        backgroundColor: '#f0f4f8'
+    },
+    container: {
+        flex: 1,
+        padding: 24,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    greeting: {
+        fontSize: 32,
+        fontWeight: '600',
+        marginBottom: 8
+    },
+    welcome: {
+        fontSize: 24,
+        color: '#555',
+        marginBottom: 4
+    },
+    appName: {
+        fontSize: 28,
+        fontWeight: '700',
+        color: '#0a84ff'
+    }
+});
 
 
 }),
